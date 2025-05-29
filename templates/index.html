@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Download Instagram videos or reels instantly in HD. 100% free, fast, and easy Instagram Video Saver. No registration required."
+    />
+    <meta
+      name="keywords"
+      content="instagram video downloader, instagram reel downloader, instagram video saver, download instagram videos, instagram reels download"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta
+      property="og:title"
+      content="InstaSaver – Download Instagram Reels Instantly"
+    />
+    <meta
+      property="og:description"
+      content="Download Instagram videos or reels instantly in HD. 100% free, fast, and easy Instagram Video Saver."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://instasaver.com" />
+    <meta property="og:image" content="../static/logo-with-bg.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>
+      InstaSaver – Download Instagram Reels Instantly | Free Instagram Video
+      Downloader
+    </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+            colors: {
+              primary: {
+                light: "#A855F7",
+                DEFAULT: "#7C3AED",
+                dark: "#5B21B6",
+              },
+              accent: {
+                light: "#F472B6",
+                DEFAULT: "#EC4899",
+                dark: "#DB2777",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "InstaSaver",
+        "description": "Download Instagram videos or reels instantly in HD. 100% free, fast, and easy Instagram Video Saver.",
+        "url": "https://instasaver.com",
+        "applicationCategory": "Utility",
+        "operatingSystem": "Any",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    </script>
+  </head>
+
+  <body class="bg-gray-50 text-gray-800 font-sans antialiased">
+    <!-- Header -->
+    <header class="fixed w-full bg-white shadow z-50">
+      <div
+        class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between"
+      >
+        <a
+          href="/"
+          class="flex items-center gap-2"
+          aria-label="InstaSaver Home"
+        >
+          <img
+            src="../static/logo-with-bg.png"
+            alt="InstaSaver Logo"
+            class="h-10 w-10"
+          />
+          <span class="text-2xl font-bold text-primary-dark">InstaSaver</span>
+        </a>
+        <nav class="hidden md:flex gap-8" aria-label="Main navigation">
+          <a href="#how" class="hover:text-primary transition">How It Works</a>
+          <a href="#faq" class="hover:text-primary transition">FAQ</a>
+          <a href="#contact" class="hover:text-primary transition">Contact</a>
+        </nav>
+        <button
+          id="menuBtn"
+          class="md:hidden focus:outline-none focus:ring-2 focus:ring-primary rounded-lg p-1"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+      <div
+        id="mobileMenu"
+        class="hidden bg-white border-t transform transition-transform duration-300 ease-in-out"
+        role="navigation"
+        aria-label="Mobile navigation"
+      >
+        <div class="flex flex-col px-4 py-2 space-y-2">
+          <a
+            href="#how"
+            class="py-2 hover:text-primary transition flex items-center"
+          >
+            <svg
+              class="w-5 h-5 mr-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M13 10V3L4 14h7v7l9-11h-7z"
+              />
+            </svg>
+            How It Works
+          </a>
+          <a
+            href="#faq"
+            class="py-2 hover:text-primary transition flex items-center"
+          >
+            <svg
+              class="w-5 h-5 mr-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+            FAQ
+          </a>
+          <a
+            href="#contact"
+            class="py-2 hover:text-primary transition flex items-center"
+          >
+            <svg
+              class="w-5 h-5 mr-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+              />
+            </svg>
+            Contact
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="pt-24 pb-16 bg-gradient-to-br from-primary to-accent">
+      <div class="max-w-2xl mx-auto px-4 text-center">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4">
+          Download Instagram Videos & Reels Instantly
+        </h1>
+        <p class="text-lg text-purple-100 mb-8">
+          Paste your Instagram video or reel URL below and save your favorite
+          moments in HD—completely free!
+        </p>
+
+        <!-- Form Card -->
+        <div class="bg-white rounded-xl shadow-lg p-6">
+          <form
+            action="/download"
+            method="post"
+            class="flex flex-col sm:flex-row gap-4"
+            id="downloadForm"
+          >
+            <input
+              name="insta_url"
+              type="url"
+              required
+              placeholder="Enter Instagram URL..."
+              class="flex-1 px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary"
+              aria-label="Instagram URL"
+            />
+            <button
+              type="submit"
+              class="px-6 py-3 bg-primary text-white font-semibold rounded-lg shadow hover:bg-primary-dark transition flex items-center justify-center disabled:opacity-70 disabled:cursor-not-allowed"
+              aria-label="Download video"
+            >
+              <span class="download-text">Download</span>
+              <svg
+                class="animate-spin h-5 w-5 ml-2 hidden"
+                id="loadingSpinner"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <circle
+                  class="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  stroke-width="4"
+                ></circle>
+                <path
+                  class="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                ></path>
+              </svg>
+            </button>
+          </form>
+          <!-- Conditional preview & error blocks -->
+          {% if error %}
+          <div class="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg">
+            <p class="text-red-600 flex items-center">
+              <svg
+                class="w-5 h-5 mr-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+              {{ error }}
+            </p>
+          </div>
+          {% endif %} {% if video_url %}
+          <div class="mt-6">
+            <div
+              class="relative aspect-video w-full max-w-2xl mx-auto bg-gray-100 rounded-lg overflow-hidden"
+            >
+              <video
+                src="{{ video_url }}"
+                controls
+                class="w-full h-full object-contain"
+                preload="metadata"
+                controlsList="nodownload"
+              ></video>
+            </div>
+            <div class="flex flex-wrap gap-4 mt-4 justify-center">
+              <a
+                href="/stream?video_url={{ video_url | urlencode }}"
+                download="occazo_indigle_instagram_video.mp4"
+                class="px-5 py-2 bg-primary text-white rounded-lg hover:bg-primary-dark transition flex items-center"
+              >
+                <svg
+                  class="w-5 h-5 mr-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+                  />
+                </svg>
+                Download Video
+              </a>
+              {% if source_url %}
+              <a
+                href="{{ source_url }}"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="px-5 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition flex items-center"
+              >
+                <svg
+                  class="w-5 h-5 mr-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  />
+                </svg>
+                Open in Instagram
+              </a>
+              {% endif %}
+            </div>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how" class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold text-primary mb-12">How It Works</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div
+            class="p-6 bg-gray-50 rounded-xl shadow hover:shadow-lg transition"
+          >
+            <div class="text-primary mb-4 text-2xl font-bold">1</div>
+            <h3 class="font-semibold mb-2">Copy Link</h3>
+            <p class="text-gray-600">Copy the Instagram video or reel link.</p>
+          </div>
+          <div
+            class="p-6 bg-gray-50 rounded-xl shadow hover:shadow-lg transition"
+          >
+            <div class="text-primary mb-4 text-2xl font-bold">2</div>
+            <h3 class="font-semibold mb-2">Paste</h3>
+            <p class="text-gray-600">Paste it into the input above.</p>
+          </div>
+          <div
+            class="p-6 bg-gray-50 rounded-xl shadow hover:shadow-lg transition"
+          >
+            <div class="text-primary mb-4 text-2xl font-bold">3</div>
+            <h3 class="font-semibold mb-2">Download</h3>
+            <p class="text-gray-600">
+              Click "Download" and save it to your device.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-20 bg-gray-50">
+      <div class="max-w-3xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-primary mb-10">FAQ</h2>
+        <div class="space-y-4">
+          <details class="p-5 bg-white rounded-xl shadow">
+            <summary class="cursor-pointer font-semibold">
+              Is InstaSaver free to use?
+            </summary>
+            <p class="mt-2 text-gray-600">
+              Yes, InstaSaver is completely free—no hidden costs or
+              subscriptions.
+            </p>
+          </details>
+          <details class="p-5 bg-white rounded-xl shadow">
+            <summary class="cursor-pointer font-semibold">
+              Can I download Instagram Stories?
+            </summary>
+            <p class="mt-2 text-gray-600">
+              Not yet—currently we support only videos & reels, but Stories
+              support is coming.
+            </p>
+          </details>
+          <details class="p-5 bg-white rounded-xl shadow">
+            <summary class="cursor-pointer font-semibold">
+              Is it legal to save videos from Instagram?
+            </summary>
+            <p class="mt-2 text-gray-600">
+              Personal offline use is generally fine, but don't redistribute
+              without permission.
+            </p>
+          </details>
+          <details class="p-5 bg-white rounded-xl shadow">
+            <summary class="cursor-pointer font-semibold">
+              What about privacy and security?
+            </summary>
+            <p class="mt-2 text-gray-600">
+              We don't store your URLs or downloads—everything's direct and
+              secure.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-20 bg-white">
+      <div class="max-w-2xl mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold text-primary mb-4">Contact Us</h2>
+        <p class="mb-2">Have questions? We're here to help!</p>
+        <a
+          href="mailto:occazo.com@gmail.com"
+          class="text-primary hover:underline"
+        >
+          occazo.com@gmail.com
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-6 bg-gray-800 text-gray-400 text-center">
+      <div
+        class="max-w-4xl mx-auto px-4 flex flex-col md:flex-row justify-center items-center gap-4"
+      >
+        <a href="#" class="hover:text-white transition">Privacy Policy</a>
+        <span class="hidden md:inline">|</span>
+        <a href="#" class="hover:text-white transition">Disclaimer</a>
+        <span class="hidden md:inline">|</span>
+        <a href="#" class="hover:text-white transition">Terms of Service</a>
+      </div>
+      <p class="mt-4 text-sm">
+        &copy; 2024 InstaSaver. Not affiliated with Instagram.
+      </p>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+      // Mobile menu functionality
+      const menuBtn = document.getElementById("menuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      menuBtn.addEventListener("click", () => {
+        const isExpanded = menuBtn.getAttribute("aria-expanded") === "true";
+        menuBtn.setAttribute("aria-expanded", !isExpanded);
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // Form submission handling
+      const downloadForm = document.getElementById("downloadForm");
+      const loadingSpinner = document.getElementById("loadingSpinner");
+      const downloadText = document.querySelector(".download-text");
+      const submitButton = downloadForm.querySelector("button");
+
+      downloadForm.addEventListener("submit", (e) => {
+        submitButton.disabled = true;
+        loadingSpinner.classList.remove("hidden");
+        downloadText.textContent = "Processing...";
+
+        // Add loading state to the form
+        downloadForm.classList.add("opacity-75");
+      });
+
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+            // Close mobile menu if open
+            if (!mobileMenu.classList.contains("hidden")) {
+              menuBtn.click();
+            }
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

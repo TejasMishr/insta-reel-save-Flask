@@ -56,7 +56,5 @@ def stream():
         }
     )
 
-if __name__ == '__main__':
-    # Create static directory if it doesn't exist
-    os.makedirs('static', exist_ok=True)
-    app.run(debug=True) 
+# Remove the if __name__ == '__main__' block and add this for Vercel
+app = app 
